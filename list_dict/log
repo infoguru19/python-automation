@@ -1,0 +1,122 @@
+[{
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 3,
+        "message": "Job exceeded rate limits: Your table exceeded quota for table update operations. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas"
+      },
+      "authenticationInfo": {
+        "principalEmail": "svc-admin-event-service@prod-2510-datasec-d69e00.iam.gserviceaccount.com",
+        "serviceAccountDelegationInfo": [
+          {
+            "firstPartyPrincipal": {
+              "principalEmail": "service-679819585851@serverless-robot-prod.iam.gserviceaccount.com"
+            }
+          }
+        ],
+        "oauthInfo": {
+          "oauthClientId": "104009599218580912587"
+        }
+      },
+      "requestMetadata": {
+        "callerIp": "10.84.255.154",
+        "callerSuppliedUserAgent": "gcloud-golang-bigquery/1.67.0,gzip(gfe)",
+        "callerNetwork": "//compute.googleapis.com/projects/prod-host-501b6298bea22651/global/networks/__unknown__",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "bigquery.googleapis.com",
+      "methodName": "jobservice.query",
+      "authorizationInfo": [
+        {
+          "resource": "projects/prod-2134-entdatalake-5938ee",
+          "permission": "bigquery.jobs.create",
+          "granted": true,
+          "resourceAttributes": {}
+        },
+        {
+          "resource": "projects/prod-2134-entdatalake-5938ee/datasets/db2_mvsdb200_lake/tables/tssrlsum_history_v1/rowAccessPolicies/",
+          "permission": "bigquery.rowAccessPolicies.delete",
+          "granted": true,
+          "resourceAttributes": {}
+        },
+        {
+          "resource": "projects/prod-2134-entdatalake-5938ee/datasets/db2_mvsdb200_lake/tables/tssrlsum_history_v1/rowAccessPolicies/",
+          "permission": "bigquery.rowAccessPolicies.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {}
+        },
+        {
+          "resource": "projects/prod-2134-entdatalake-5938ee/datasets/db2_mvsdb200_lake/tables/tssrlsum_history_v1",
+          "permission": "bigquery.rowAccessPolicies.list",
+          "granted": true,
+          "resourceAttributes": {}
+        },
+        {
+          "resource": "projects/prod-2134-entdatalake-5938ee",
+          "permission": "bigquery.jobs.create",
+          "granted": true,
+          "resourceAttributes": {}
+        }
+      ],
+      "resourceName": "projects/prod-2134-entdatalake-5938ee/queries",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.cloud.bigquery.logging.v1.AuditData",
+        "jobQueryRequest": {
+          "query": "DROP ALL ROW ACCESS POLICIES ON `prod-2134-entdatalake-5938ee.db2_mvsdb200_lake.tssrlsum_history_v1`;",
+          "defaultDataset": {},
+          "projectId": "prod-2134-entdatalake-5938ee"
+        },
+        "jobQueryResponse": {
+          "job": {
+            "jobName": {
+              "projectId": "prod-2134-entdatalake-5938ee",
+              "jobId": "job_69L5twwPG0SKLYsVphO0pU4BLQhX",
+              "location": "US"
+            },
+            "jobConfiguration": {
+              "query": {
+                "query": "DROP ALL ROW ACCESS POLICIES ON `prod-2134-entdatalake-5938ee.db2_mvsdb200_lake.tssrlsum_history_v1`;",
+                "destinationTable": {},
+                "createDisposition": "CREATE_IF_NEEDED",
+                "writeDisposition": "WRITE_EMPTY",
+                "defaultDataset": {},
+                "queryPriority": "QUERY_INTERACTIVE",
+                "statementType": "QUERY_STATEMENT_TYPE_UNSPECIFIED"
+              }
+            },
+            "jobStatus": {
+              "state": "DONE",
+              "error": {
+                "code": 8,
+                "message": "Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas"
+              },
+              "additionalErrors": [
+                {
+                  "code": 8,
+                  "message": "Exceeded rate limits: too many table update operations for this table. For more information, see https://cloud.google.com/bigquery/docs/troubleshoot-quotas"
+                }
+              ]
+            },
+            "jobStatistics": {
+              "createTime": "2025-11-14T20:33:22.174Z",
+              "startTime": "2025-11-14T20:33:22.320Z",
+              "endTime": "2025-11-14T20:33:22.320Z",
+              "reservation": "unreserved"
+            }
+          }
+        }
+      }
+    },
+    "insertId": "-rpni64eh0uxz",
+    "resource": {
+      "type": "bigquery_resource",
+      "labels": {
+        "project_id": "prod-2134-entdatalake-5938ee"
+      }
+    },
+    "timestamp": "2025-11-17T05:03:39.817251Z",
+    "severity": "ERROR",
+    "logName": "projects/prod-2134-entdatalake-5938ee/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-11-17T05:03:39.832758139Z"
+  }]
